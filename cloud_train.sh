@@ -1,0 +1,2 @@
+gcloud ml-engine jobs submit training `whoami`_object_detection_`date +%s` --job-dir=gs://zinc-guru-3900/train --packages dist/object_detection-0.1.tar.gz,slim/dist/slim-0.1.tar.gz --module-name object_detection.train --region us-central1 --config object_detection/samples/cloud/cloud.yml -- \ --train_dir=gs://zinc-guru-3900/deep-fashion/train --pipeline_config_path=gs://zinc-guru-3900/deep-fashion/data/ssd_inception_v2_deep_fashion.config
+
